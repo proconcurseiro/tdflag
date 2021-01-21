@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://objeto_interativo/bandeira_00.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objeto_interativo/bandeira_01.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objeto_interativo/bandeira_02.tscn" type="PackedScene" id=3]
 
 [sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 0.142153, 1 )
 
 [node name="Spatial" type="Spatial"]
 
@@ -13,6 +16,12 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
 
+[node name="StaticBody" type="StaticBody" parent="MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13138, 0 )
+shape = SubResource( 2 )
+
 [node name="Spatial" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.538962, 1.19209e-07, 7.037 )
 
@@ -20,4 +29,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.538962, 1.19209e-07, 7.037 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.68973, 1.19209e-07, -5.3512 )
 
 [node name="Spatial3" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.19576, 0, 0.688496 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.36309, -9.53674e-07, -6.96721 )
+
+[node name="Posicao_Giro_Horz" type="Spatial" parent="."]
+transform = Transform( 0.581015, 0, 0.813892, 0, 1, 0, -0.813892, 0, 0.581015, 7.57084, 2.68177, 7.46102 )
+
+[node name="Cam_Giro_Vert" type="Camera" parent="Posicao_Giro_Horz"]
+transform = Transform( 1, 0, 0, 0, 0.951154, 0.308718, 0, -0.308718, 0.951154, 0, 0, 0 )

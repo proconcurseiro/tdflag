@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Top Down Flag Royale"
+run/main_scene="res://fase/planeta_00/terreno_base.tscn"
 config/icon="res://icon.png"
 
 [gdnative]
