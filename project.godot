@@ -24,6 +24,12 @@ config/name="Top Down Flag Royale"
 run/main_scene="res://fase/planeta_00/terreno_base.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/borderless=true
+
 [gdnative]
 
 singletons=[ "res://git_api.gdnlib" ]
