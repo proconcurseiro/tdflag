@@ -11,6 +11,7 @@ var pulo = false
 onready var camera = $pivot/camera
 onready var rotation_helper = $pivot
 
+
 func get_input():
 	pulo = false
 	if Input.is_action_just_pressed("pulo"):
@@ -18,13 +19,13 @@ func get_input():
 	var input_dir = Vector3()
 	# desired move in camera direction
 	if Input.is_action_pressed("avancar"):
-		input_dir += -camera.global_transform.basis.z
+		input_dir += -camera.global_transform.basis.z.slide(Vector3(0,1,0))
 	if Input.is_action_pressed("recuar"):
-		input_dir += camera.global_transform.basis.z
+		input_dir += camera.global_transform.basis.z.slide(Vector3(0,1,0))
 	if Input.is_action_pressed("lateral_esquerda"):
-		input_dir += -camera.global_transform.basis.x
+		input_dir += -camera.global_transform.basis.x.slide(Vector3(0,1,0))
 	if Input.is_action_pressed("lateral_direita"):
-		input_dir += camera.global_transform.basis.x
+		input_dir += camera.global_transform.basis.x.slide(Vector3(0,1,0))
 	input_dir = input_dir.normalized()
 	return input_dir
 	
@@ -45,7 +46,7 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotation_helper.rotate_x(-event.relative.y * sensibilidade_mouse)
 		rotate_y(-event.relative.x * sensibilidade_mouse)
-		rotation_helper.rotation.x = clamp(rotation_helper.rotation.x, -1.2, 1.2)
+		rotation_helper.rotation.x = clamp(rotation_helper.rotation.x, deg2rad(-80), deg2rad(-80.001))
 		
 func _physics_process(delta):
 	velocidade_atual.y += GRAVIDADE * delta

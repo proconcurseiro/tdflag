@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/blob_player.obj-74f092072285946b67862817a060d555.mesh"
+
+[deps]
+
+files=[ "res://.import/blob_player.obj-74f092072285946b67862817a060d555.mesh" ]
+
+source_file="res://personagem_jogador/blob_player.obj"
+dest_files=[ "res://.import/blob_player.obj-74f092072285946b67862817a060d555.mesh", "res://.import/blob_player.obj-74f092072285946b67862817a060d555.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
