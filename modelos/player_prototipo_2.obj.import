@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/player_prototipo_2.obj-897ee488bc79aa9db779f7d2ecf57c6a.mesh"
+
+[deps]
+
+files=[ "res://.import/player_prototipo_2.obj-897ee488bc79aa9db779f7d2ecf57c6a.mesh" ]
+
+source_file="res://modelos/player_prototipo_2.obj"
+dest_files=[ "res://.import/player_prototipo_2.obj-897ee488bc79aa9db779f7d2ecf57c6a.mesh", "res://.import/player_prototipo_2.obj-897ee488bc79aa9db779f7d2ecf57c6a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

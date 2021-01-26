@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/enemy_prototipo_3.obj-6451b79952a5439b900a08ba88da3607.mesh"
+
+[deps]
+
+files=[ "res://.import/enemy_prototipo_3.obj-6451b79952a5439b900a08ba88da3607.mesh" ]
+
+source_file="res://modelos/enemy_prototipo_3.obj"
+dest_files=[ "res://.import/enemy_prototipo_3.obj-6451b79952a5439b900a08ba88da3607.mesh", "res://.import/enemy_prototipo_3.obj-6451b79952a5439b900a08ba88da3607.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
